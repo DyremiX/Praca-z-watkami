@@ -71,7 +71,7 @@ public class Main {
                     System.out.println("--------------------------------------");
                     My_exec.list(helper);
                     break;
-                case 3: // anulowanie
+                case 3: // anulowanie kk
                     My_exec.list();
                     System.out.println("--------------------------------------");
                     System.out.println("Podaj ID FTasku którego chcesz usunąć.");
