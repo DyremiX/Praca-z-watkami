@@ -25,7 +25,7 @@ public class Main {
     public static void main(String[] args) {
         clearScreen();
         Wykonwawca<String> My_exec = new Wykonwawca(new FTask[10]);
-        for (int i = 2 ; i < 10 ; i++){
+        for (int i = 2 ; i < 8 ; i++){
             My_exec.execute(new FTask<String>(new Task(i * 5000, "main-" + i*5)));
         }
         Scanner sc = new Scanner(System.in);
