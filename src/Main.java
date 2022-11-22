@@ -26,7 +26,7 @@ public class Main {
         clearScreen();
         Wykonwawca<String> My_exec = new Wykonwawca(new FTask[10]);
         for (int i = 2 ; i < 8 ; i++){
-            My_exec.execute(new FTask<String>(new Task(i * 5000, "main-" + i*5)));
+            My_exec.execute(new FTask<String>(new Task(i * 5000, "main-" + i*5),new String[10]));
         }
         Scanner sc = new Scanner(System.in);
         // My_exec.list();
@@ -48,14 +48,15 @@ public class Main {
         int wybor = 1;
         int helper;
         boolean helper2;
-        while (wybor != 5) {
+        while (wybor != 6) {
             System.out.println("--------------------------------------");
             System.out.println("MENU");
             System.out.println("1. Lista zadań");
             System.out.println("2. Pobranie stanu zadania");
             System.out.println("3. Anulowanie zadania");
             System.out.println("4. Wynik zadania");
-            System.out.println("5. Zamknij program");
+            System.out.println("5. Wylistuj wyniki z pomocą słuchacza");
+            System.out.println("6. Zamknij program");
             wybor = sc.nextInt();
             System.out.println("--------------------------------------");
             clearScreen();
@@ -98,6 +99,8 @@ public class Main {
                         e.printStackTrace();
                     }
                     break;
+                case 5:
+                    My_exec.list_result();
                 default:
                     break;
             }

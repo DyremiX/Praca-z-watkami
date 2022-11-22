@@ -47,6 +47,14 @@ class Wykonwawca<V> {
         }
     }
 
+    public void list_result(){
+        int i = 0;
+        while(FTask.wyniki[i] != null && i < 10){
+            System.out.println(FTask.wyniki[i]);
+            i++;
+        }
+    }
+
     public void CancelTask(int i, Boolean mayInterruptIfRunning){
         lista[i].cancel(mayInterruptIfRunning);
     }
